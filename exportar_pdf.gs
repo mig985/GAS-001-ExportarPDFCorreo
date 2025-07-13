@@ -1,4 +1,14 @@
 /**
+ * 🧩 Agrega un menú personalizado al abrir la hoja
+ */
+function onOpen() {
+  const ui = SpreadsheetApp.getUi();
+  ui.createMenu('📤 Reportes')
+    .addItem('Exportar hoja como PDF y enviar', 'exportarYEnviarPDF')
+    .addToUi();
+}
+
+/**
  * 📄 exportar_pdf.gs
  * 
  * Exporta una hoja específica de Google Sheets como PDF y la envía automáticamente por correo.
